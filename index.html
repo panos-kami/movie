@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sex and the City — The Return</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f6f1ec;
+  color:#151515;
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+button{
+  font:inherit;
+}
+
+section{
+  position:relative;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100svh;
+  background:
+    linear-gradient(to bottom,rgba(0,0,0,.08),rgba(0,0,0,.72)),
+    url("IMG_7027.jpeg") center/cover no-repeat;
+  color:white;
+  padding:22px 20px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:9px;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+}
+
+.hero-pill{
+  border:1px solid rgba(255,255,255,.6);
+  padding:7px 11px;
+  border-radius:100px;
+}
+
+.hero-content{
+  max-width:600px;
+}
+
+.hero-kicker{
+  font-size:10px;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  font-size:clamp(54px,16vw,90px);
+  line-height:.86;
+  letter-spacing:-2px;
+}
+
+.hero h1 span{
+  display:block;
+  font-style:italic;
+}
+
+.hero-sub{
+  margin-top:24px;
+  max-width:400px;
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(255,255,255,.88);
+}
+
+.screening-info{
+  border-top:1px solid rgba(255,255,255,.35);
+  margin-top:28px;
+  padding-top:19px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.screening-info small{
+  display:block;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.6;
+}
+
+.screening-info strong{
+  display:block;
+  margin-top:4px;
+  font-family:"Playfair Display",serif;
+  font-size:18px;
+  font-weight:500;
+}
+
+.scroll-text{
+  margin-top:26px;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  opacity:.72;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.content{
+  padding:80px 20px;
+}
+
+.light{
+  background:#fff;
+}
+
+.dark{
+  background:#151515;
+  color:white;
+}
+
+.tag{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  opacity:.45;
+  margin-bottom:17px;
+}
+
+.title{
+  font-family:"Playfair Display",serif;
+  font-size:45px;
+  line-height:1.02;
+  font-weight:500;
+  letter-spacing:-1px;
+}
+
+.text{
+  max-width:620px;
+  margin-top:23px;
+  font-size:15px;
+  line-height:1.8;
+  color:#5d5d5d;
+}
+
+.dark .text{
+  color:#b8b8b8;
+}
+
+.italic{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.9s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+
+
+/* =========================
+   RETURN / SERIES
+========================= */
+
+.feature-image{
+  margin-top:40px;
+}
+
+.feature-image img{
+  height:480px;
+  object-fit:cover;
+}
+
+.caption{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:10px;
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:1.8px;
+  opacity:.45;
+}
+
+
+/* =========================
+   SERIES COLLAGE
+========================= */
+
+.series-gallery{
+  padding:12px;
+  background:#d9c6cf;
+}
+
+.series-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+
+.series-grid img{
+  height:230px;
+  object-fit:cover;
+}
+
+.series-grid img:first-child{
+  grid-column:1/3;
+  height:320px;
+}
+
+
+/* =========================
+   ABOUT RETURN
+========================= */
+
+.return-block{
+  background:#e5b8cd;
+  padding:85px 20px;
+  text-align:center;
+}
+
+.return-block h2{
+  font-family:"Playfair Display",serif;
+  font-size:46px;
+  line-height:1.05;
+  font-weight:500;
+}
+
+.return-block p{
+  max-width:400px;
+  margin:20px auto 0;
+  line-height:1.75;
+  font-size:14px;
+}
+
+
+/* =========================
+   CAST
+========================= */
+
+.cast-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:42px;
+}
+
+.cast-card{
+  background:#fff;
+  color:#151515;
+  overflow:hidden;
+}
+
+.cast-card img{
+  height:220px;
+  object-fit:cover;
+}
+
+.cast-copy{
+  padding:14px;
+}
+
+.cast-copy h3{
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  font-weight:500;
+}
+
+.cast-copy span{
+  display:block;
+  margin-top:4px;
+  font-size:8px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  opacity:.48;
+}
+
+.cast-card.lead{
+  grid-column:1/3;
+}
+
+.cast-card.lead img{
+  height:370px;
+}
+
+.cast-card.lead h3{
+  font-size:28px;
+}
+
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+
+.analysis-button-wrap{
+  margin-top:38px;
+}
+
+.analysis-button{
+  width:100%;
+  border:none;
+  background:white;
+  color:#111;
+  padding:18px 14px;
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.analysis-note{
+  font-size:9px;
+  color:#777;
+  margin-top:10px;
+  text-align:center;
+}
+
+
+/* =========================
+   ANALYSIS SCREEN
+========================= */
+
+.deep-analysis{
+  display:none;
+  min-height:100svh;
+  background:#020202;
+  color:white;
+  padding:90px 22px;
+  align-items:center;
+}
+
+.deep-analysis.active{
+  display:flex;
+}
+
+.analysis-inner{
+  width:100%;
+  max-width:520px;
+  margin:auto;
+}
+
+.analysis-system{
+  color:#e4a2c2;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.analysis-inner h2{
+  margin-top:22px;
+  font-family:"Playfair Display",serif;
+  font-size:47px;
+  line-height:1.03;
+  font-weight:500;
+}
+
+.analysis-inner > p{
+  margin-top:20px;
+  color:#888;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.analysis-list{
+  margin-top:38px;
+  border-top:1px solid #222;
+}
+
+.analysis-line{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:13px 0;
+  border-bottom:1px solid #222;
+  font-size:9px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.analysis-line span:last-child{
+  color:#bbb;
+}
+
+.progress{
+  margin-top:38px;
+  height:4px;
+  background:#252525;
+  overflow:hidden;
+}
+
+.progress-fill{
+  width:0;
+  height:100%;
+  background:#e4a2c2;
+}
+
+.progress-info{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+  font-size:8px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:#777;
+}
+
+.error{
+  margin-top:45px;
+  opacity:0;
+  transform:translateY(15px);
+  transition:.7s ease;
+}
+
+.error.visible{
+  opacity:1;
+  transform:none;
+}
+
+.error-code{
+  color:#ff5656;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.error h3{
+  margin-top:12px;
+  font-family:"Playfair Display",serif;
+  font-size:32px;
+  line-height:1.1;
+  font-weight:500;
+}
+
+.error p{
+  color:#888;
+  margin-top:12px;
+  font-size:13px;
+}
+
+
+/* =========================
+   REFRESH
+========================= */
+
+.refresh-screen{
+  display:none;
+  min-height:100svh;
+  background:#f4efe9;
+  align-items:center;
+  justify-content:center;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.refresh-screen.active{
+  display:flex;
+}
+
+.refresh-icon{
+  font-size:44px;
+  animation:rotate 1s linear infinite;
+}
+
+@keyframes rotate{
+  to{transform:rotate(360deg)}
+}
+
+.refresh-screen h2{
+  font-family:"Playfair Display",serif;
+  margin-top:25px;
+  font-size:38px;
+  font-weight:500;
+}
+
+.refresh-screen p{
+  margin-top:12px;
+  color:#777;
+  font-size:13px;
+}
+
+
+/* =========================
+   MARINA REVEAL
+========================= */
+
+.corrected-result{
+  display:none;
+  background:#000;
+  color:white;
+}
+
+.corrected-result.visible{
+  display:block;
+}
+
+.corrected-photo{
+  height:100svh;
+  position:relative;
+}
+
+.corrected-photo img{
+  height:100%;
+  object-fit:cover;
+}
+
+.corrected-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0,0,0,.92) 100%
+  );
+}
+
+.corrected-copy{
+  position:absolute;
+  z-index:2;
+  bottom:38px;
+  left:20px;
+  right:20px;
+}
+
+.corrected-label{
+  color:#e9acc9;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.corrected-copy h3{
+  margin-top:10px;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.corrected-copy h1{
+  font-family:"Playfair Display",serif;
+  font-size:72px;
+  font-weight:500;
+  line-height:.9;
+  margin-top:6px;
+}
+
+.corrected-copy p{
+  margin-top:15px;
+  color:#c3c3c3;
+  font-size:13px;
+}
+
+
+/* =========================
+   CORRECTED PROFILE
+========================= */
+
+.profile-row{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:12px;
+  padding:25px 0;
+  border-bottom:1px solid #ddd;
+}
+
+.profile-row:first-of-type{
+  margin-top:38px;
+  border-top:1px solid #ddd;
+}
+
+.profile-number{
+  font-size:9px;
+  opacity:.4;
+}
+
+.profile-row h3{
+  font-family:"Playfair Display",serif;
+  font-size:27px;
+  font-weight:500;
+}
+
+.profile-row p{
+  margin-top:7px;
+  color:#666;
+  font-size:13px;
+  line-height:1.65;
+}
+
+
+/* =========================
+   EVIDENCE
+========================= */
+
+.evidence{
+  background:#eee5df;
+}
+
+.evidence-item{
+  margin-top:50px;
+}
+
+.evidence-item img{
+  max-height:600px;
+  object-fit:cover;
+}
+
+.evidence-label{
+  margin-top:13px;
+  font-size:8px;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+  opacity:.45;
+}
+
+.evidence-item h3{
+  margin-top:8px;
+  font-family:"Playfair Display",serif;
+  font-size:28px;
+  font-weight:500;
+}
+
+.evidence-item p{
+  margin-top:7px;
+  color:#666;
+  font-size:13px;
+  line-height:1.6;
+}
+
+
+/* =========================
+   DANCE
+========================= */
+
+.dance{
+  background:#e5a9c7;
+  padding:90px 20px;
+  text-align:center;
+}
+
+.dance h2{
+  font-family:"Playfair Display",serif;
+  font-size:48px;
+  line-height:1;
+  font-weight:500;
+}
+
+.dance p{
+  max-width:390px;
+  margin:22px auto 0;
+  font-size:14px;
+  line-height:1.75;
+}
+
+.song{
+  display:inline-block;
+  margin-top:27px;
+  padding:12px 22px;
+  border:1px solid #111;
+  border-radius:100px;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+
+/* =========================
+   FRIENDS
+========================= */
+
+.group-photo{
+  margin-top:38px;
+}
+
+.group-photo img{
+  max-height:560px;
+  object-fit:cover;
+}
+
+.friend-list{
+  margin-top:25px;
+}
+
+.friend{
+  padding:17px 0;
+  border-bottom:1px solid #333;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.friend strong{
+  font-family:"Playfair Display",serif;
+  font-size:23px;
+  font-weight:500;
+}
+
+.friend span{
+  font-size:8px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:#777;
+}
+
+
+/* =========================
+   PANAGIOTIS
+========================= */
+
+.panagiotis{
+  height:88svh;
+  position:relative;
+  background:#000;
+}
+
+.panagiotis img{
+  height:100%;
+  object-fit:cover;
+}
+
+.panagiotis::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(0,0,0,.92)
+  );
+}
+
+.panagiotis-copy{
+  position:absolute;
+  z-index:2;
+  bottom:35px;
+  left:20px;
+  right:20px;
+  color:white;
+}
+
+.panagiotis-copy small{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.panagiotis-copy h2{
+  margin-top:10px;
+  font-family:"Playfair Display",serif;
+  font-size:39px;
+  line-height:1.05;
+  font-weight:500;
+}
+
+
+/* =========================
+   DATE REVEAL
+========================= */
+
+.date-reveal{
+  min-height:90svh;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.big-date{
+  font-family:"Playfair Display",serif;
+  font-size:72px;
+  line-height:.9;
+  color:#d88db1;
+}
+
+.age-number{
+  font-family:"Playfair Display",serif;
+  font-size:170px;
+  line-height:.8;
+  margin-top:35px;
+}
+
+.date-reveal h2{
+  margin-top:28px;
+  font-family:"Playfair Display",serif;
+  font-size:38px;
+  font-weight:500;
+}
+
+.date-reveal p{
+  max-width:360px;
+  margin:16px auto 0;
+  color:#666;
+  font-size:14px;
+  line-height:1.7;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday{
+  background:#111;
+  color:white;
+}
+
+.birthday-photo{
+  height:68svh;
+}
+
+.birthday-photo img{
+  height:100%;
+  object-fit:cover;
+}
+
+.birthday-content{
+  padding:65px 20px 85px;
+  text-align:center;
+}
+
+.birthday-content small{
+  color:#e5a6c5;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.birthday-content h2{
+  margin-top:17px;
+  font-family:"Playfair Display",serif;
+  font-size:54px;
+  line-height:1;
+  font-weight:500;
+}
+
+.birthday-content p{
+  margin:24px auto 0;
+  max-width:400px;
+  color:#aaa;
+  font-size:14px;
+  line-height:1.8;
+}
+
+
+/* =========================
+   FINALE
+========================= */
+
+.finale{
+  min-height:80svh;
+  background:#e4a7c4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.finale h2{
+  font-family:"Playfair Display",serif;
+  font-size:63px;
+  line-height:.92;
+  font-weight:500;
+}
+
+.finale h2 span{
+  font-style:italic;
+}
+
+.finale p{
+  margin-top:23px;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     1 — CINEMA RETURN
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-top">
+    <span>Exclusive Event</span>
+    <span class="hero-pill">One Night Only</span>
+  </div>
+
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      The phenomenon returns
+    </div>
+
+    <h1>
+      Sex
+      <span>and the City</span>
+    </h1>
+
+    <p class="hero-sub">
+      This September, one of television's most iconic stories
+      returns to the big screen for an exclusive special screening.
+    </p>
+
+    <div class="screening-info">
+
+      <div>
+        <small>Date</small>
+        <strong>September 19</strong>
+      </div>
+
+      <div>
+        <small>Screening</small>
+        <strong>20:00</strong>
+      </div>
+
+    </div>
+
+    <div class="scroll-text">
+      Discover the return ↓
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     2 — BIG RETURN
+===================================================== -->
+
+<section class="return-block">
+
+  <div class="tag">The return</div>
+
+  <h2 class="fade">
+    It's really happening.
+  </h2>
+
+  <p class="fade">
+    New York. The fashion. The friendships.
+    The unforgettable characters.
+    Sex and the City is officially returning
+    to the big screen.
+  </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     3 — ABOUT SERIES
+===================================================== -->
+
+<section class="content light">
+
+  <div class="tag">
+    01 / The story
+  </div>
+
+  <h2 class="title fade">
+    Four women.
+    <br>
+    One city.
+  </h2>
+
+  <p class="text fade">
+    Set in New York City,
+    <span class="italic">Sex and the City</span>
+    follows four women as they navigate friendship,
+    relationships, careers, heartbreak and everything
+    in between.
+  </p>
+
+  <p class="text fade">
+    Over the years, the series became known not only
+    for its stories, but also for its unmistakable style,
+    its characters and the city that became a character
+    of its own.
+  </p>
+
+  <div class="feature-image fade">
+
+    <img src="IMG_7028.jpeg" alt="Sex and the City">
+
+    <div class="caption">
+      <span>New York City</span>
+      <span>The original series</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     4 — SERIES PHOTOS
+===================================================== -->
+
+<section class="series-gallery">
+
+  <div class="series-grid">
+
+    <img src="IMG_7029.jpeg" alt="Sex and the City">
+
+    <img src="IMG_7030.jpeg" alt="Sex and the City">
+
+    <img src="IMG_7031.jpeg" alt="Sex and the City">
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     5 — MAIN CAST
+===================================================== -->
+
+<section class="content dark">
+
+  <div class="tag">
+    02 / Main characters
+  </div>
+
+  <h2 class="title fade">
+    Meet the cast.
+  </h2>
+
+  <p class="text fade">
+    The characters behind one of television's most
+    recognizable groups of friends.
+  </p>
+
+
+  <div class="cast-grid">
+
+
+    <!-- CARRIE -->
+
+    <div class="cast-card lead fade">
+
+      <img src="IMG_7032.jpeg" alt="Carrie Bradshaw">
+
+      <div class="cast-copy">
+
+        <h3>
+          Carrie Bradshaw
+        </h3>
+
+        <span>
+          Lead Character
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- MIRANDA -->
+
+    <div class="cast-card fade">
+
+      <img src="IMG_7029.jpeg" alt="Miranda Hobbes">
+
+      <div class="cast-copy">
+
+        <h3>
+          Miranda
+        </h3>
+
+        <span>
+          Main Cast
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- CHARLOTTE -->
+
+    <div class="cast-card fade">
+
+      <img src="IMG_7030.jpeg" alt="Charlotte York">
+
+      <div class="cast-copy">
+
+        <h3>
+          Charlotte
+        </h3>
+
+        <span>
+          Main Cast
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- SAMANTHA -->
+
+    <div class="cast-card fade">
+
+      <img src="IMG_7031.jpeg" alt="Samantha Jones">
+
+      <div class="cast-copy">
+
+        <h3>
+          Samantha
+        </h3>
+
+        <span>
+          Main Cast
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="analysis-button-wrap fade">
+
+    <button class="analysis-button" id="analyseBtn">
+      Analyze More Results
+    </button>
+
+    <div class="analysis-note">
+      Access detailed cast analysis
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     6 — DEEP ANALYSIS
+===================================================== -->
+
+<section class="deep-analysis" id="deepAnalysis">
+
+  <div class="analysis-inner">
+
+    <div class="analysis-system">
+      Cast Archive / Extended Analysis
+    </div>
+
+    <h2>
+      Analysing the results…
+    </h2>
+
+    <p>
+      Comparing cast records, visual data,
+      character information and archived material.
+    </p>
+
+
+    <div class="analysis-list">
+
+      <div class="analysis-line">
+        <span>Original cast</span>
+        <span>Verified</span>
+      </div>
+
+      <div class="analysis-line">
+        <span>Supporting characters</span>
+        <span>Verified</span>
+      </div>
+
+      <div class="analysis-line">
+        <span>Lead character</span>
+        <span id="leadStatus">Checking…</span>
+      </div>
+
+    </div>
+
+
+    <div class="progress">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="progress-info">
+
+      <span>
+        Processing archive
+      </span>
+
+      <span id="progressNumber">
+        0%
+      </span>
+
+    </div>
+
+
+    <div class="error" id="errorBox">
+
+      <div class="error-code">
+        Error detected
+      </div>
+
+      <h3>
+        The lead character
+        appears to be incorrect.
+      </h3>
+
+      <p>
+        Original result rejected.
+        Refreshing database…
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     7 — REFRESH
+===================================================== -->
+
+<section class="refresh-screen" id="refreshScreen">
+
+  <div>
+
+    <div class="refresh-icon">
+      ↻
+    </div>
+
+    <h2>
+      Updating results…
+    </h2>
+
+    <p>
+      Correcting lead character information.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     8 — MARINA REVEAL
+===================================================== -->
+
+<section class="corrected-result" id="correctedResult">
+
+  <div class="corrected-photo">
+
+    <img src="IMG_1040.JPEG" alt="Marina">
+
+    <div class="corrected-copy">
+
+      <div class="corrected-label">
+        Corrected Cast Record
+      </div>
+
+      <h3>
+        Lead Character
+      </h3>
+
+      <h1>
+        Marina.
+      </h1>
+
+      <p>
+        Previous identification: incorrect.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     9 — REAL LEAD CHARACTER
+===================================================== -->
+
+<section class="content light">
+
+  <div class="tag">
+    03 / Corrected analysis
+  </div>
+
+  <h2 class="title fade">
+    So, who is the
+    real leading lady?
+  </h2>
+
+  <p class="text fade">
+    After updating the archive,
+    the evidence became clear.
+  </p>
+
+  <p class="text fade">
+    Carrie Bradshaw was not the lead character
+    we were looking for.
+  </p>
+
+  <p class="text fade">
+    The correct result was Marina.
+  </p>
+
+
+  <div class="profile-row fade">
+
+    <div class="profile-number">
+      01
+    </div>
+
+    <div>
+
+      <h3>
+        Blonde curls.
+      </h3>
+
+      <p>
+        One of the first inconsistencies detected
+        in the original character analysis.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="profile-row fade">
+
+    <div class="profile-number">
+      02
+    </div>
+
+    <div>
+
+      <h3>
+        Psychology student.
+      </h3>
+
+      <p>
+        Currently studying Psychology in England.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="profile-row fade">
+
+    <div class="profile-number">
+      03
+    </div>
+
+    <div>
+
+      <h3>
+        Exceptional dancer.
+      </h3>
+
+      <p>
+        With one particularly famous performance
+        still appearing repeatedly in the archive.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="profile-row fade">
+
+    <div class="profile-number">
+      04
+    </div>
+
+    <div>
+
+      <h3>
+        Frequently seen with the same cast.
+      </h3>
+
+      <p>
+        A recurring group of familiar faces appears
+        throughout nearly every chapter.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="profile-row fade">
+
+    <div class="profile-number">
+      05
+    </div>
+
+    <div>
+
+      <h3>
+        Emilios.
+      </h3>
+
+      <p>
+        Boyfriend.
+        One of the most important recurring characters
+        in the story.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     10 — EVIDENCE
+===================================================== -->
+
+<section class="content evidence">
+
+  <div class="tag">
+    04 / Photographic evidence
+  </div>
+
+  <h2 class="title fade">
+    We checked again.
+    <br>
+    The result only got clearer.
+  </h2>
+
+  <p class="text fade">
+    A closer look at the archive confirmed
+    the corrected identification.
+  </p>
+
+
+  <!-- EVIDENCE A -->
+
+  <div class="evidence-item fade">
+
+    <img src="IMG_1255.JPEG" alt="Marina">
+
+    <div class="evidence-label">
+      Evidence 01
+    </div>
+
+    <h3>
+      The curls.
+    </h3>
+
+    <p>
+      Visual similarity confirmed.
+    </p>
+
+  </div>
+
+
+  <!-- EVIDENCE B -->
+
+  <div class="evidence-item fade">
+
+    <img src="IMG_1258.JPEG" alt="Marina">
+
+    <div class="evidence-label">
+      Evidence 02
+    </div>
+
+    <h3>
+      The entrance.
+    </h3>
+
+    <p>
+      Main-character behaviour detected.
+    </p>
+
+  </div>
+
+
+  <!-- EVIDENCE C -->
+
+  <div class="evidence-item fade">
+
+    <img src="IMG_2586.JPEG" alt="Marina">
+
+    <div class="evidence-label">
+      Evidence 03
+    </div>
+
+    <h3>
+      The lifestyle.
+    </h3>
+
+    <p>
+      Consistent with the corrected lead-character profile.
+    </p>
+
+  </div>
+
+
+  <!-- EVIDENCE D -->
+
+  <div class="evidence-item fade">
+
+    <img
+      src="882A4425-16A6-4DEE-8094-E73D336771D4.jpg"
+      alt="Marina"
+    >
+
+    <div class="evidence-label">
+      Evidence 04
+    </div>
+
+    <h3>
+      Nightlife data.
+    </h3>
+
+    <p>
+      No further investigation required.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     11 — DANCING
+===================================================== -->
+
+<section class="dance">
+
+  <div class="tag">
+    Archived performance
+  </div>
+
+  <h2 class="fade">
+    The “Sorry”
+    <br>
+    choreography.
+  </h2>
+
+  <p class="fade">
+    Justin Bieber released the song.
+    Marina took care of the performance.
+  </p>
+
+  <div class="song fade">
+    Sorry · Justin Bieber
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     12 — THE REAL CAST
+===================================================== -->
+
+<section class="content dark">
+
+  <div class="tag">
+    05 / Supporting cast
+  </div>
+
+  <h2 class="title fade">
+    Every lead character
+    needs the right cast.
+  </h2>
+
+  <p class="text fade">
+    And Marina's story comes with
+    a very familiar group of recurring characters.
+  </p>
+
+
+  <div class="group-photo fade">
+
+    <img
+      src="att.L51XVsCCU2-qzn1UBoRGIKvR4JTkxnW6fI28n_cAon4.JPG"
+      alt="Marina and friends"
+    >
+
+  </div>
+
+
+  <div class="friend-list">
+
+    <div class="friend fade">
+      <strong>Andriana</strong>
+      <span>Cast</span>
+    </div>
+
+    <div class="friend fade">
+      <strong>Isidora</strong>
+      <span>Cast</span>
+    </div>
+
+    <div class="friend fade">
+      <strong>Eirini</strong>
+      <span>Cast</span>
+    </div>
+
+    <div class="friend fade">
+      <strong>Faidra</strong>
+      <span>Cast</span>
+    </div>
+
+    <div class="friend fade">
+      <strong>Emilios</strong>
+      <span>Boyfriend</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     13 — PANAGIOTIS
+===================================================== -->
+
+<section class="panagiotis">
+
+  <img src="IMG_3817.jpeg" alt="Marina and Panagiotis">
+
+  <div class="panagiotis-copy">
+
+    <small>
+      Additional archive discovery
+    </small>
+
+    <h2>
+      And somehow,
+      Panagiotis made it
+      into the series too.
+    </h2>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     14 — SOMETHING ELSE IS STRANGE
+===================================================== -->
+
+<section class="date-reveal">
+
+  <div>
+
+    <div class="tag">
+      Final archive detail
+    </div>
+
+    <div class="big-date fade">
+      19.09
+    </div>
+
+    <div class="age-number fade">
+      20
+    </div>
+
+    <h2 class="fade">
+      Wait…
+      <br>
+      twenty?
+    </h2>
+
+    <p class="fade">
+      And suddenly,
+      the date of this special screening
+      starts to make a lot more sense.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     15 — BIRTHDAY
+===================================================== -->
+
+<section class="birthday">
+
+  <div class="birthday-photo">
+
+    <img src="IMG_7279.JPG" alt="Marina Birthday">
+
+  </div>
+
+  <div class="birthday-content">
+
+    <small>
+      September 19 · Season 20
+    </small>
+
+    <h2 class="fade">
+      Happy Birthday,
+      <br>
+      Marina.
+    </h2>
+
+    <p class="fade">
+      Twenty years of stories,
+      memories, people, dancing,
+      travelling and a lot more still to come.
+    </p>
+
+    <p class="fade">
+      Apparently,
+      Sex and the City had the wrong
+      main character all along.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     16 — END
+===================================================== -->
+
+<section class="finale">
+
+  <div>
+
+    <h2 class="fade">
+      Marina
+      <br>
+      <span>and the City</span>
+    </h2>
+
+    <p class="fade">
+      Season 20 starts now
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================================
+   SCROLL ANIMATIONS
+========================================= */
+
+const fadeObserver = new IntersectionObserver(
+(entries) => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+
+  });
+
+},
+{
+  threshold:0.12
+}
+);
+
+document.querySelectorAll(".fade").forEach(el => {
+  fadeObserver.observe(el);
+});
+
+
+/* =========================================
+   CAST ANALYSIS
+========================================= */
+
+const analyseBtn =
+document.getElementById("analyseBtn");
+
+const analysis =
+document.getElementById("deepAnalysis");
+
+const progressFill =
+document.getElementById("progressFill");
+
+const progressNumber =
+document.getElementById("progressNumber");
+
+const errorBox =
+document.getElementById("errorBox");
+
+const leadStatus =
+document.getElementById("leadStatus");
+
+const refreshScreen =
+document.getElementById("refreshScreen");
+
+const correctedResult =
+document.getElementById("correctedResult");
+
+
+let analysisRunning = false;
+
+
+analyseBtn.addEventListener("click", () => {
+
+  if(analysisRunning) return;
+
+  analysisRunning = true;
+
+  analysis.classList.add("active");
+
+  setTimeout(() => {
+    analysis.scrollIntoView({
+      behavior:"smooth"
+    });
+  },100);
+
+
+  let progress = 0;
+
+
+  const interval = setInterval(() => {
+
+    progress += Math.floor(Math.random()*4)+2;
+
+    if(progress >= 97){
+
+      progress = 97;
+
+      clearInterval(interval);
+
+      progressFill.style.width = progress + "%";
+      progressNumber.textContent = progress + "%";
+
+      leadStatus.textContent = "Conflict";
+
+      setTimeout(() => {
+
+        errorBox.classList.add("visible");
+
+      },700);
+
+
+      setTimeout(() => {
+
+        refreshScreen.classList.add("active");
+
+        refreshScreen.scrollIntoView({
+          behavior:"smooth"
+        });
+
+      },3000);
+
+
+      setTimeout(() => {
+
+        progressFill.style.width = "100%";
+        progressNumber.textContent = "100%";
+
+        correctedResult.classList.add("visible");
+
+        correctedResult.scrollIntoView({
+          behavior:"smooth"
+        });
+
+      },5200);
+
+    }
+
+    else{
+
+      progressFill.style.width =
+      progress + "%";
+
+      progressNumber.textContent =
+      progress + "%";
+
+    }
+
+  },90);
+
+});
+
+</script>
+
+</body>
+</html>
